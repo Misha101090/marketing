@@ -1,0 +1,51 @@
+.cta {
+    @include container;
+
+
+    &__wrapper {
+        background-color: $bg-primary;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        padding: 10px 80px;
+        color: $text-secondary;
+    }
+
+    &__title {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    &__caption {
+        flex-basis: 50%;
+    }
+
+    &__info {
+        font-size: 24px;
+        margin-bottom: 56px;
+    }
+
+    &__image {
+        position: relative;
+        .gmail {
+            left: 25%;
+            top: -5%;
+        }
+        .telegram {
+            top: 10%;
+            right: 10%;
+        }
+        .sms {
+            top: 40%;
+            left: 25%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cta{
+        margin-top: 52px;
+    }
+}

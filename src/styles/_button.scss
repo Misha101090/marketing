@@ -1,0 +1,44 @@
+@import "variables";
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $button-bg;
+    color: $text-secondary;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+
+    .title {
+        padding: 12px 20px;
+    }
+
+    .arrow {
+        background-color: $button-bg;
+        width: 67px;
+        height: 67px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 40%;
+        }
+    }
+
+    &.gray {
+        background-color: $button-bg-secondary;
+    }
+}
+
+.btn-secondary {
+    display: inline-flex;
+    gap: 10px;
+    background-color: $button-bg-secondary;
+    color: $text-secondary;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+}

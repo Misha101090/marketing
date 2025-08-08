@@ -1,0 +1,58 @@
+.header {
+    background-color: $bg-primary;
+    color: $text-secondary;
+
+    &__content {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__main {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+    }
+
+    &__logo {
+        display: block;
+    }
+
+    &__nav {
+        display: none;
+    }
+
+    &__nav-item {
+        text-decoration: none;
+        color: $text-secondary;
+    }
+
+    &__button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 4;
+
+        &__nav {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        &__button {
+            display: block;
+            background-color: $bg-head-button;
+            padding: 12px 24px;
+            cursor: pointer;
+            color: $text-secondary;
+            font-size: 18px;
+            border: none;
+        }
+    }
+}

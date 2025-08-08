@@ -1,0 +1,95 @@
+.retention {
+    @include container;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        background-color: $gray-bg;
+    }
+
+    &__caption {
+        position: relative;
+        padding: 40px 20px 80px;
+        box-sizing: border-box;
+        flex-basis: 100%;
+
+        .button{
+            position: absolute;
+            justify-content: space-between;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+        }
+    }
+
+    &__image {
+       display: none;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 0 24px 0;
+    }
+
+    &__info {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+
+    &__goals {
+        margin-bottom: 32px;
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 14px;
+            font-size: 18px;
+            font-weight: 400;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background-image: url("assets/images/arrow-done.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                top: 2px;
+                left: 0;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .retention {
+        &__image {
+            display: block;
+            position: relative;
+            flex-basis: 50%;
+            background-image: url("assets/images/retention.webp");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-shrink: 0;
+        }
+        &__caption {
+            padding: 70px 80px;
+            flex-basis: 50%;
+
+            .button{
+                position: static;
+            }
+        }
+        &__title {
+            font-size: 44px;
+        }
+
+        &__info {
+            font-size: 24px;
+
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: $black-60;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    &.active {
+        display: flex;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__content {
+        position: relative;
+        background: $text-secondary;
+        padding: 30px;
+        z-index: 1;
+        max-width: 400px;
+        width: 90%;
+    }
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        font-weight: 400p;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        margin: 0 auto 20px;
+    }
+
+    .email-form {
+        flex-direction: column;
+
+        input {
+            border-color: $bg-head-button;
+            padding: 12px 24px;
+
+            &::placeholder {
+                color: $text-color;
+                font-weight: 400;
+            }
+        }
+
+        .field-group {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        button {
+            background-color: $bg-head-button;
+        }
+
+        .error-message {
+            bottom: -18px;
+            padding: 0;
+        }
+    }
+}

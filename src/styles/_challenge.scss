@@ -1,0 +1,128 @@
+.challenge {
+    @include container;
+    position: relative;
+    min-height: 100vh;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 400;
+    }
+}
+
+.card {
+    position: absolute;
+    width: 260px;
+    height: 280px;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 24px;
+    font-size: 22px;
+    box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transform: translateY(50px) scale(0.95) rotate(0deg);
+    transition:
+        transform 0.8s cubic-bezier(0.65, 0, 0.35, 1),
+        opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.card-1 {
+    background: $blue-accent;
+    color: $text-secondary;
+    top: 28%;
+    left: 10%;
+    z-index: 4;
+    transform: rotate(10deg);
+}
+
+.card-2 {
+    background: $text-secondary;
+    color: $bg-primary;
+    top: 40%;
+    right: 5%;
+    z-index: 3;
+    transform: rotate(-5deg);
+}
+
+.card-3 {
+    background: $bg-primary;
+    color: $text-secondary;
+    top: 55%;
+    left: 15%;
+    z-index: 2;
+    transform: rotate(-25deg);
+}
+
+.card-4 {
+    display: none;
+}
+
+.card.hidden-up {
+    transform: translateY(-200%) rotate(45deg);
+}
+
+@media screen and (min-width: 1024px) {
+    .challenge {
+        height: 240vh;
+
+        &__container {
+            position: sticky;
+            top: 0;
+            height: 80vh;
+            overflow: hidden;
+        }
+
+        &__title {
+            max-width: 80%;
+            text-align: center;
+            font-size: 90px;
+            font-weight: 400;
+        }
+    }
+
+    .card {
+        width: 332px;
+        height: 353px;
+        padding: 40px;
+        border-radius: 30px;
+        font-size: 28px;
+    }
+
+    .card-1 {
+        top: 25%;
+        transform: rotate(5deg);
+        left: initial;
+    }
+
+    .card-2 {
+        top: 30%;
+        transform: rotate(-25deg);
+        right: initial;
+    }
+
+    .card-3 {
+        top: 35%;
+        left: initial;
+        transform: rotate(-20deg);
+    }
+
+    .card-4 {
+        display: block;
+        background: $gray-bg;
+        color: $bg-primary;
+        top: 40%;
+        z-index: 1;
+        transform: rotate(-15deg);
+    }
+}

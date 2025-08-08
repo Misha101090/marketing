@@ -1,0 +1,29 @@
+{
+    "name": "remrkt",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "gulp build",
+        "dev": "gulp",
+        "format": "prettier --write .",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.27.10",
+        "del": "^6.1.1",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-uglify": "^3.0.2",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.5.2",
+        "prettier": "^3.6.2",
+        "sass": "^1.66.1"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx,scss,css,html,json,md}": [
+            "prettier --write"
+        ]
+    }
+}

@@ -1,0 +1,40 @@
+@import "variables";
+
+.email-form {
+    display: flex;
+    overflow: hidden;
+
+    input {
+        padding: 22px;
+        font-size: 20px;
+        outline: none;
+        background: $input-bg;
+        color: $text-color;
+        border: 1px solid transparent;
+        transition: border-color 0.3s;
+
+        &::placeholder {
+            color: $text-color;
+        }
+
+        &.invalid {
+            border-color: $email-invalid;
+        }
+    }
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.error-message {
+    color: $email-invalid;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 16px;
+    position: absolute;
+    padding-left: 24px;
+}

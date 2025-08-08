@@ -1,0 +1,135 @@
+.footer {
+    background-color: $bg-primary;
+    color: $text-secondary;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+
+    &__wrapper {
+        @include container;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 34px;
+    }
+
+    &__caption {
+        font-size: 16px;
+        color: $text-footer;
+        padding-bottom: 44px;
+        border-bottom: 1px solid $white-20;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 44px 0;
+        border-bottom: 1px solid $white-20;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+
+    &__logo img {
+        width: 280px;
+        margin-bottom: 18px;
+    }
+
+    &__brand {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 34px;
+        font-size: 16px;
+        color: $white-80;
+    }
+
+    a {
+        display: block;
+        color: $white-80;
+        text-decoration: none;
+        margin-bottom: 8px;
+    }
+
+    .email-form {
+        max-width: 450px;
+        width: 100%;
+        position: relative;
+        overflow: initial;
+
+        input {
+            background-color: $input-dark-bg;
+            color: $text-secondary;
+            border: 1px solid $white-20;
+            padding: 14px 22px;
+            font-size: 16px;
+
+            &::placeholder {
+                color: $text-secondary;
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+
+        .button {
+            font-size: 16px;
+            background-color: $white-20;
+        }
+
+        .field-group {
+            flex: 1;
+        }
+
+        .error-message {
+            bottom: -18px;
+            padding: 0;
+        }
+    }
+}
+
+.footer__cta-title,
+.social__list-title {
+    margin-bottom: 20px;
+}
+.contact__list-title {
+    margin-bottom: 16px;
+}
+.contact__us {
+    display: flex;
+    gap: 60px;
+}
+
+.socials__icons {
+    display: flex;
+    gap: 12px;
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background-color: $social-bg;
+        transition: background 0.3s ease;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover {
+            background-color: $social-bg-hover;
+        }
+    }
+}

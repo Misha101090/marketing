@@ -1,0 +1,48 @@
+.integration {
+    @include container;
+
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 14px;
+
+        img{
+            max-width: 130px;
+            margin-bottom: 10px;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .integration {
+        margin: 54px auto;
+        &__title {
+            font-size: 48px;
+        }
+
+        &__list {
+            gap: 60px;
+            justify-content: center;
+
+            img{
+                max-width: initial;
+                margin-bottom: initial;
+            }
+        }
+    }
+}
