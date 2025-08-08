@@ -3,7 +3,7 @@
 .button {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: $button-bg;
     color: $text-secondary;
     font-size: 20px;
@@ -13,6 +13,7 @@
 
     .title {
         padding: 12px 20px;
+        flex:1;
     }
 
     .arrow {

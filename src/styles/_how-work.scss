@@ -59,6 +59,10 @@
             align-items: center;
             gap: 34px;
             padding: 60px 80px;
+
+            .button{
+                position: static;
+            }
         }
 
         &__title {

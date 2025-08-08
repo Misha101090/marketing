@@ -1,7 +1,7 @@
 .challenge {
     @include container;
     position: relative;
-    min-height: 100vh;
+    min-height: 900px;
 
     &__container {
         display: flex;
@@ -28,6 +28,7 @@
     justify-content: space-between;
     border-radius: 24px;
     font-size: 22px;
+    margin-left: -130px;
     box-shadow:
         rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -41,7 +42,7 @@
     background: $blue-accent;
     color: $text-secondary;
     top: 28%;
-    left: 10%;
+    left: 50%;
     z-index: 4;
     transform: rotate(10deg);
 }
@@ -50,7 +51,7 @@
     background: $text-secondary;
     color: $bg-primary;
     top: 40%;
-    right: 5%;
+    left: 50%;
     z-index: 3;
     transform: rotate(-5deg);
 }
@@ -59,7 +60,7 @@
     background: $bg-primary;
     color: $text-secondary;
     top: 55%;
-    left: 15%;
+    left: 50%;
     z-index: 2;
     transform: rotate(-25deg);
 }
@@ -97,6 +98,7 @@
         padding: 40px;
         border-radius: 30px;
         font-size: 28px;
+        margin-left: initial;
     }
 
     .card-1 {
@@ -108,7 +110,7 @@
     .card-2 {
         top: 30%;
         transform: rotate(-25deg);
-        right: initial;
+        left: initial;
     }
 
     .card-3 {
